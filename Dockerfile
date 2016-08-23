@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:23
 
 RUN dnf -y install openssh-server git
 RUN dnf -y install ed # needed to edit passwd and group
