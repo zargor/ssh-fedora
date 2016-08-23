@@ -1,4 +1,4 @@
-FROM fedora:23
+FROM registry.access.redhat.com/rhel7:latest
 
 RUN dnf -y install openssh-server git
 RUN dnf -y install ed # needed to edit passwd and group
