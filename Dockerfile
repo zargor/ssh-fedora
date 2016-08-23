@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/rhel7:latest
 
-RUN dnf -y install openssh-server git
-RUN dnf -y install ed # needed to edit passwd and group
+RUN yum -y install openssh-server git
+RUN yum -y install ed # needed to edit passwd and group
 
 # setup openssh
 RUN sed -i "s/#PasswordAuthentication yes/PasswordAuthentication no/" /etc/ssh/sshd_config
