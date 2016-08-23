@@ -28,6 +28,6 @@ CMD echo -e ",s/1234321/`id -u`/g\\012 w" | ed -s /etc/passwd && \
     chmod 700 /home/git/.ssh && \
     chmod 600 /home/git/.ssh/authorized_keys && \
     mkdir /home/git/sample.git && \
-    git -C /home/git/sample.git init --bare && \
+    git --git-dir=/home/git/sample.git init --bare && \
     ssh-keygen -A && \
     exec /usr/sbin/sshd -D
